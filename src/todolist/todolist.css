@@ -108,7 +108,14 @@ div h2{
   color: #fff;
   font-size: 18px;
 }
-.fa-trash{
+.todo-btn {
+  width: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-trash,
+.fa-edit{
   cursor: pointer;
   pointer-events: auto;
   z-index: 10;
@@ -116,6 +123,10 @@ div h2{
   -webkit-transition: color 0.15s linear;
   transition: color 0.15s linear;
   font-size: 2rem;
+}
+
+.fa-edit{
+  margin-left: -3.5rem;
 }
 
 .btn {
