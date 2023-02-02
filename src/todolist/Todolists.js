@@ -16,6 +16,20 @@ const Todolists = () => {
       setAddItems('')
     }
    }
+      // delete Item
+   const deleteItem=(id)=>{
+      const selectedItem=items.filter((item,index)=>{
+      return index!==id
+
+      })
+      setItems(selectedItem);
+   }
+
+   // Remove all
+   const removeAll=()=>{
+      setItems([])
+   }
+
 
   return (
    <>
@@ -40,14 +54,14 @@ const Todolists = () => {
                   return(
                      <div className="eachItem" key={index}>
                      <h3>{item}</h3>
-                     <FaTrash className='fa-trash'/>
+                     <FaTrash className='fa-trash' onClick={()=>deleteItem(index)}/>
                   </div>
                   )
                })
               }
             </div>
             <div className='showItem'>
-               <button className='btn'>CheckList</button>
+               <button className='btn' onClick={removeAll}>Remove All</button>
             </div>
       </div>
    </div>
